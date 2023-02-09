@@ -1,7 +1,7 @@
 export const tweetsData = [// how to transfer the array to index.js
     {
-        handle: `@TrollBot66756542 💎`,
-        profilePic: `images/troll.jpg`,
+        handle: `@trumpMega 💎`,
+        profilePic: `twiges/trump.jpg`,
         likes: 27,
         retweets: 10,
         tweetText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
@@ -12,20 +12,20 @@ export const tweetsData = [// how to transfer the array to index.js
         uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
     },
     {
-        handle: `@Elon ✅`,
-        profilePic: `images/musk.png`,
+        handle: `@Mutin ✅`,
+        profilePic: `twiges/putin.png`,
         likes: 6500,
         retweets: 234,
         tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
         replies: [
             {
-                handle: `@TomCruise ✅`,
-                profilePic: `images/tcruise.png`,
+                handle: `@Macron ✅`,
+                profilePic: `twiges/macron.png`,
                 tweetText: `Yes! Sign me up! 😎🛩`,
             },
             {
-                handle: `@ChuckNorris ✅`,
-                profilePic: `images/chucknorris.jpeg`,
+                handle: `@Kim ✅`,
+                profilePic: `twiges/kim.png`,
                 tweetText: `I went last year😴`,
             },
         ],
@@ -34,20 +34,20 @@ export const tweetsData = [// how to transfer the array to index.js
         uuid: '3c23454ee-c0f5-9g9g-9c4b-77835tgs2',
     },
     {
-        handle: `@NoobCoder12`,
-        profilePic: `images/flower.png`,
+        handle: `@Boris`,
+        profilePic: `twiges/boris.png`,
         likes: 10,
         retweets: 3,
         tweetText: `Are you a coder if you only know HTML?`,
         replies: [
             {
-                handle: `@StackOverflower ☣️`,
-                profilePic: `images/overflow.png`,
+                handle: `@Biden ☣️`,
+                profilePic: `twiges/biden.png`,
                 tweetText: `No. Onviosuly not. Go get a job in McDonald's.`,
             },
             {
-                handle: `@YummyCoder64`,
-                profilePic: `images/love.png`,
+                handle: `@Obama`,
+                profilePic: `twiges/obama.png`,
                 tweetText: `You are wonderful just as you are! ❤️`,
             },
         ],

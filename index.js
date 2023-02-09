@@ -7,3 +7,7 @@ tweetBtn.addEventListener("click", function(){
     console.log(tweetInput.value)
     tweetInput.value = " "
 })
+
+function getFeedHtml(){
+    
+}
