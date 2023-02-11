@@ -12,7 +12,7 @@ export const tweetsData = [// how to transfer the array to index.js
         uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
     },
     {
-        handle: `@Mutin ✅`,
+        handle: `@putin ✅`,
         profilePic: `twiges/putin.png`,
         likes: 6500,
         retweets: 234,

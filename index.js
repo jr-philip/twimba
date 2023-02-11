@@ -3,6 +3,8 @@ import { tweetsData } from "./data.js"  //how to receive arrays drom data.js
 const tweetBtn = document.getElementById("tweet-btn")
 const tweetInput = document.getElementById("tweet-input")
 
+
+
 tweetBtn.addEventListener("click", function(){
     console.log(tweetInput.value)
     
@@ -36,4 +38,8 @@ function getFeedHtml(){
     })
     return feedHtml
 }
-getFeedHtml()
+
+function render(){
+    document.getElementById("feed").innerHTML = getFeedHtml()// long way = const feed =document.getElementById("feed")feed.innerHTML = getFeedHtml()
+}
+render()
