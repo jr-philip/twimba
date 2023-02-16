@@ -16,9 +16,10 @@ document.addEventListener("click",function(e){// these event listener focuses on
 })
 
 function handleLikeClick(tweetId){// aim isto make these function log out the uuid or icon which has been clicked
-    const targetTweetObj = tweetsData.filter(function(tweet){
-        return targetTweetObj === tweetId
+    const targetTweetObj = tweetsData.filter(function(tweet){//the parameter(tweet) will rep all element in the array(tweetsData) in turn 
+        return tweet.uuid === tweetId //the return statement will call on each statement as it iterates over the array
     })[0]
+    targetTweetObj.likes++
     console.log(targetTweetObj)
 }
 
