@@ -29,7 +29,7 @@ function getFeedHtml(){
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
-        <img src="${tweet.twiges}" class="profile-pic">
+        <img src="${tweet.images}" class="profile-pic">
         <div>
             <p class="handle">${tweet.handle}</p>
             <p class="tweet-text">${tweet.tweetText}</p>

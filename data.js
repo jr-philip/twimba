@@ -1,7 +1,7 @@
 export const tweetsData = [// how to transfer the array to index.js
     {
         handle: `@trumpMega 💎`,
-        profilePic: `twiges/trump.jpg`,
+        profilePic: `images/trump.jpg`,
         likes: 27,
         retweets: 10,
         tweetText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
@@ -13,19 +13,19 @@ export const tweetsData = [// how to transfer the array to index.js
     },
     {
         handle: `@putin ✅`,
-        profilePic: `twiges/putin.png`,
+        profilePic: `images/putin.png`,
         likes: 6500,
         retweets: 234,
         tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
         replies: [
             {
                 handle: `@Macron ✅`,
-                profilePic: `twiges/macron.png`,
+                profilePic: `images/macron.png`,
                 tweetText: `Yes! Sign me up! 😎🛩`,
             },
             {
                 handle: `@Kim ✅`,
-                profilePic: `twiges/kim.png`,
+                profilePic: `images/kim.png`,
                 tweetText: `I went last year😴`,
             },
         ],
@@ -35,19 +35,19 @@ export const tweetsData = [// how to transfer the array to index.js
     },
     {
         handle: `@Boris`,
-        profilePic: `twiges/boris.png`,
+        profilePic: `images/boris.png`,
         likes: 10,
         retweets: 3,
         tweetText: `Are you a coder if you only know HTML?`,
         replies: [
             {
                 handle: `@Biden ☣️`,
-                profilePic: `twiges/biden.png`,
+                profilePic: `images/biden.png`,
                 tweetText: `No. Onviosuly not. Go get a job in McDonald's.`,
             },
             {
                 handle: `@Obama`,
-                profilePic: `twiges/obama.png`,
+                profilePic: `images/obama.png`,
                 tweetText: `You are wonderful just as you are! ❤️`,
             },
         ],
