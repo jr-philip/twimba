@@ -21,18 +21,16 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     })[0]
     if(targetTweetObj.isLiked){//decrement of likes
         targetTweetObj.likes--
-        targetTweetObj.isLiked=false
     }else{
         targetTweetObj.likes++//increment of likes
-        targetTweetObj.isLiked=true
     }
-   
+    targetTweetObj.isLiked = ! targetTweetObj.isLiked
     render()//will help in increment of likes
 }
 
 function getFeedHtml(){
     let feedHtml = ''
-    tweetsData.forEach(function(tweet){//forEach iterates through the array
+    tweetsData.forEach(function(tweet){//forEach iterates through the arrays
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
