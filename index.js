@@ -20,7 +20,7 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
         return tweet.uuid === tweetId //the return statement will call on each statement as it iterates over the array
     })[0]
     targetTweetObj.likes++
-    console.log(targetTweetObj)
+    render()
 }
 
 function getFeedHtml(){
