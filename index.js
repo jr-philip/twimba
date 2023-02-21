@@ -24,7 +24,7 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     }else{
         targetTweetObj.likes++//increment of likes
     }
-    targetTweetObj.isLiked = ! targetTweetObj.isLiked
+    targetTweetObj.isLiked = ! targetTweetObj.isLiked//the logical not operator(!)will flip the 1st isLiked to either t or f in regard to its original state
     render()//will help in increment of likes
 }
 
