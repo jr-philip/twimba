@@ -19,7 +19,14 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     const targetTweetObj = tweetsData.filter(function(tweet){//the parameter(tweet) will rep all element in the array(tweetsData) in turn 
         return tweet.uuid === tweetId //the return statement will call on each statement as it iterates over the array
     })[0]
-    targetTweetObj.likes++
+    if(targetTweetObj.isLiked){
+        targetTweetObj.likes--
+        targetTweetObj.isLiked=false
+    }else{
+        targetTweetObj.likes++
+        targetTweetObj.isLiked=true
+    }
+   
     render()//will help in increment of likes
 }
 
