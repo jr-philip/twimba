@@ -32,15 +32,15 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
 }
 
 function handleRetweetClick(tweetId){
-    const targetRetweetObj = tweetsData.filter(function(tweet){
+    const targetTweetObj = tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId
     })[0]
-    if(targetRetweetObj.isRetweeted){
-        targetRetweetObj.retweets--
+    if(targetTweetObj.isRetweeted){
+        targetTweetObj.retweets--
     }else{
-        targetRetweetObj.retweets++
+        targetTweetObj.retweets++
     }
-    targetRetweetObj.isRetweeted = ! targetRetweetObj.isRetweeted
+    targetTweetObj.isRetweeted = ! targetTweetObj.isRetweeted
     render()
 }
 
