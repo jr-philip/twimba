@@ -12,7 +12,10 @@ tweetBtn.addEventListener("click", function(){
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
     if (e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
-    }
+    }else if(e.target.dataset.retweet){
+        handleRetweetClick(e.target.dataset.retweet)
+    } 
+   
 })
 
 function handleLikeClick(tweetId){// aim isto make these function log out the uuid or icon which has been clicked
@@ -26,6 +29,19 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     }
     targetTweetObj.isLiked = ! targetTweetObj.isLiked//the logical not operator(!)will flip the 1st isLiked to either t or f in regard to its original state
     render()//will help in increment of likes
+}
+
+function handleRetweetClick(tweetId){
+    const targetRetweetObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+    if(targetRetweetObj.isRetweeted){
+        targetRetweetObj.retweets--
+    }else{
+        targetRetweetObj.retweets++
+    }
+    targetRetweetObj.isRetweeted = ! targetRetweetObj.isRetweeted
+    render()
 }
 
 function getFeedHtml(){
