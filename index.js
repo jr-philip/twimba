@@ -31,16 +31,16 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     render()//will help in increment of likes
 }
 
-function handleRetweetClick(tweetId){
-    const targetTweetObj = tweetsData.filter(function(tweet){
+function handleRetweetClick(tweetId) {
+    const targetTweetObj = tweetsData.filter(function (tweet) {
         return tweet.uuid === tweetId
     })[0]
-    if(targetTweetObj.isRetweeted){
+    if (targetTweetObj.isRetweeted) {
         targetTweetObj.retweets--
-    }else{
+    } else {
         targetTweetObj.retweets++
     }
-    targetTweetObj.isRetweeted = ! targetTweetObj.isRetweeted// flipping the boolean
+    targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted// flipping the boolean
     render()
 }
 
