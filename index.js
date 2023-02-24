@@ -86,3 +86,6 @@ function render(){
     document.getElementById("feed").innerHTML = getFeedHtml()// long way = const feed =document.getElementById("feed")feed.innerHTML = getFeedHtml()
 }
 render()
+function renderMe(){
+    
+}
