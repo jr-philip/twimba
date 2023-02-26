@@ -22,6 +22,7 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     const targetTweetObj = tweetsData.filter(function(tweet){//the parameter(tweet) will rep all element in the array(tweetsData) in turn 
         return tweet.uuid === tweetId //the return tweet uuid will call on each statement as it iterates over the array
     })[0]
+    
     if(targetTweetObj.isLiked){//decrement of likes
         targetTweetObj.likes--
     }else{
@@ -32,9 +33,11 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
 }
 
 function handleRetweetClick(tweetId) {
+
     const targetTweetObj = tweetsData.filter(function (tweet) {
         return tweet.uuid === tweetId
     })[0]
+
     if (targetTweetObj.isRetweeted) {
         targetTweetObj.retweets--
     } else {
@@ -45,15 +48,19 @@ function handleRetweetClick(tweetId) {
 }
 
 function getFeedHtml(){
+
     let feedHtml = ''
+
     tweetsData.forEach(function(tweet){//forEach iterates through the arrays
 
         let likeIconClass = ""
+
         if(tweet.isLiked){
             likeIconClass ="liked"
         }
 
         let retweetIconClass = " "
+
         if(tweet.isRetweeted){
             retweetIconClass = "retweeted"
         }
