@@ -22,7 +22,7 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     const targetTweetObj = tweetsData.filter(function(tweet){//the parameter(tweet) will rep all element in the array(tweetsData) in turn 
         return tweet.uuid === tweetId //the return tweet uuid will call on each statement as it iterates over the array
     })[0]
-    
+
     if(targetTweetObj.isLiked){//decrement of likes
         targetTweetObj.likes--
     }else{
@@ -64,6 +64,11 @@ function getFeedHtml(){
         if(tweet.isRetweeted){
             retweetIconClass = "retweeted"
         }
+
+        if(tweet.replies.length){
+            console.log(tweet.uuid)
+        }
+
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
