@@ -5,9 +5,9 @@ const tweetInput = document.getElementById("tweet-input")
 
 
 
-tweetBtn.addEventListener("click", function(){
+ /*tweetBtn.addEventListener("click", function(){
     console.log(tweetInput.value)
-})
+})*/
 
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
     if (e.target.dataset.like){
@@ -18,6 +18,9 @@ document.addEventListener("click",function(e){// these event listener focuses on
     }
     else if (e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
+    }
+    else if (e.target.dataset.tweet){
+        handleTweetBtnClick(e.target.dataset.tweet)
     }
    
 })
@@ -53,6 +56,10 @@ function handleRetweetClick(tweetId) {
 
 function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle(`hidden`)
+}
+
+function handleTweetBtnClick(){
+    console.log(tweetInput.value)
 }
 
 function getFeedHtml(){
