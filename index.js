@@ -1,9 +1,6 @@
 import { tweetsData } from "./data.js"  //how to receive arrays drom data.js
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-
-const tweetInput = document.getElementById("tweet-input")
-
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
     if (e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
@@ -55,7 +52,9 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    if(tweetInput.value){
+    const tweetInput = document.getElementById("tweet-input")
+
+    if(tweetInput.value){// the if statement will stop the empty tweets when the button is clicked
         tweetsData.unshift({// using push will make the tweet be at the bottom while unshift up top
             handle: `@mitch 💎`,
             profilePic: `images/mitch.jpg`,
@@ -68,9 +67,8 @@ function handleTweetBtnClick(){
             uuid: uuidv4()//we use empty bracket inorder to return something
         })
         render()
-        tweetInput.value = ""
-    }
-    
+        tweetInput.value = ""// it will make the text area  clear after tweeting
+    } 
 }
 
 function getFeedHtml(){
