@@ -19,8 +19,8 @@ document.addEventListener("click",function(e){// these event listener focuses on
     else if (e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
     }
-    else if (e.target.dataset.tweet){
-        handleTweetBtnClick(e.target.dataset.tweet)
+    else if (e.target.id === 'tweet-btn'){
+        handleTweetBtnClick()
     }
    
 })
