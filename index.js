@@ -12,9 +12,13 @@ tweetBtn.addEventListener("click", function(){
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
     if (e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
-    }else if(e.target.dataset.retweet){
+    }
+    else if (e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
-    } 
+    }
+    else if (e.target.dataset.reply){
+        handleReplyClick(e.target.dataset.reply)
+    }
    
 })
 
@@ -45,6 +49,10 @@ function handleRetweetClick(tweetId) {
     }
     targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted// flipping the boolean
     render()
+}
+
+function handleReplyClick(replyId){
+    document.getElementById(`replies-${replyId}`).classList.toggle(`hidden`)
 }
 
 function getFeedHtml(){
