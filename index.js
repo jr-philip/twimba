@@ -147,3 +147,11 @@ function render(){
     document.getElementById("feed").innerHTML = getFeedHtml()// long way = const feed =document.getElementById("feed")feed.innerHTML = getFeedHtml()
 }
 render()
+
+/*summary
+1.textarea - is a html tag which help to create the multiline input field where we can tweet
+2. forEach - is a method which iterates through array
+3.data attributes - i used it to store data in html string in js eg.data-reply="${tweet.uuid}"
+4.conditionally rendered style
+5.NOT operator -i used it to flip the booleans e.g targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted
+6.cdn - content delivery network*/
