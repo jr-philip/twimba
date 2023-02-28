@@ -1,13 +1,5 @@
 import { tweetsData } from "./data.js"  //how to receive arrays drom data.js
-
-const tweetBtn = document.getElementById("tweet-btn")
 const tweetInput = document.getElementById("tweet-input")
-
-
-
- /*tweetBtn.addEventListener("click", function(){
-    console.log(tweetInput.value)
-})*/
 
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
     if (e.target.dataset.like){
@@ -21,8 +13,7 @@ document.addEventListener("click",function(e){// these event listener focuses on
     }
     else if (e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
-    }
-   
+    }  
 })
 
 function handleLikeClick(tweetId){// aim isto make these function log out the uuid or icon which has been clicked
@@ -32,7 +23,8 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
 
     if(targetTweetObj.isLiked){//decrement of likes
         targetTweetObj.likes--
-    }else{
+    }
+    else{
         targetTweetObj.likes++//increment of likes
     }
     targetTweetObj.isLiked = ! targetTweetObj.isLiked//the logical not operator(!)will flip the 1st isLiked to either t or f in regard to its original state
@@ -47,7 +39,8 @@ function handleRetweetClick(tweetId) {
 
     if (targetTweetObj.isRetweeted) {
         targetTweetObj.retweets--
-    } else {
+    } 
+    else {
         targetTweetObj.retweets++
     }
     targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted// flipping the boolean
