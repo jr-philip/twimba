@@ -55,17 +55,18 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    console.log({
-        handle: `@trumpMega 💎`,
-        profilePic: `images/trump.jpg`,
+    tweetsData.unshift({
+        handle: `@mitch 💎`,
+        profilePic: `images/mitch.jpg`,
         likes: 0,
         retweets: 0,
         tweetText:tweetInput.value,
         replies: [],
         isLiked: false,
         isRetweeted: false,
-        uuid: uuidv4(),//we use empty bracket inorder to return something
-    },)
+        uuid: uuidv4()//we use empty bracket inorder to return something
+    })
+    render()
 }
 
 function getFeedHtml(){
