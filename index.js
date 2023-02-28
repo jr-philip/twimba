@@ -64,7 +64,7 @@ function handleTweetBtnClick(){
         replies: [],
         isLiked: false,
         isRetweeted: false,
-        uuid: uuidv4(),
+        uuid: uuidv4(),//we use empty bracket inorder to return something
     },)
 }
 
