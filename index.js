@@ -55,18 +55,22 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    tweetsData.unshift({
-        handle: `@mitch 💎`,
-        profilePic: `images/mitch.jpg`,
-        likes: 0,
-        retweets: 0,
-        tweetText:tweetInput.value,
-        replies: [],
-        isLiked: false,
-        isRetweeted: false,
-        uuid: uuidv4()//we use empty bracket inorder to return something
-    })
-    render()
+    if(tweetInput.value){
+        tweetsData.unshift({// using push will make the tweet be at the bottom while unshift up top
+            handle: `@mitch 💎`,
+            profilePic: `images/mitch.jpg`,
+            likes: 0,
+            retweets: 0,
+            tweetText: tweetInput.value,
+            replies: [],
+            isLiked: false,
+            isRetweeted: false,
+            uuid: uuidv4()//we use empty bracket inorder to return something
+        })
+        render()
+        tweetInput.value = ""
+    }
+    
 }
 
 function getFeedHtml(){
