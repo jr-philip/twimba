@@ -1,4 +1,7 @@
 import { tweetsData } from "./data.js"  //how to receive arrays drom data.js
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
+
 const tweetInput = document.getElementById("tweet-input")
 
 document.addEventListener("click",function(e){// these event listener focuses on the icons in the doc
@@ -52,7 +55,17 @@ function handleReplyClick(replyId){
 }
 
 function handleTweetBtnClick(){
-    console.log(tweetInput.value)
+    console.log({
+        handle: `@trumpMega 💎`,
+        profilePic: `images/trump.jpg`,
+        likes: 0,
+        retweets: 0,
+        tweetText:tweetInput.value,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false,
+        uuid: uuidv4(),
+    },)
 }
 
 function getFeedHtml(){
