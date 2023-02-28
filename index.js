@@ -67,7 +67,7 @@ function getFeedHtml(){
 
         let repliesHtml =""
         if(tweet.replies.length){
-           tweet.replies.forEach(function(reply){
+           tweet.replies.forEach(function(reply){// forEach is a good way to iterate over arrays
             repliesHtml += `
 <div class="tweet-reply">
     <div class="tweet-inner">
