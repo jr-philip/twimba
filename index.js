@@ -31,6 +31,8 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     render()//will help in increment of likes
 }
 
+function
+
 function handleRetweetClick(tweetId) {
 
     const targetTweetObj = tweetsData.filter(function (tweet) {
@@ -83,16 +85,16 @@ function getFeedHtml(){
             likeIconClass ="liked"
         }
 
+        let deleteIconClass = ""
+
+        if (tweet.isDeleted) {
+            deleteIconClass = "deleted"
+        }
+
         let retweetIconClass = " "
 
         if(tweet.isRetweeted){
             retweetIconClass = "retweeted"
-        }
-
-        let deleteIconClass = ""
-
-        if(tweet.isDeleted){
-            deleteIconClass = "deleted"
         }
 
         let repliesHtml =""
@@ -132,9 +134,9 @@ function getFeedHtml(){
                     ${tweet.likes}
                 </span>
                 <span class="tweet-delete">
-                <i class="fa-solid fa-trash ${deleteIconClass}" 
-                data-retweet="${tweet.uuid}">
-                </i>
+                    <i class="fa-solid fa-trash ${deleteIconClass}" 
+                    data-retweet="${tweet.uuid}">
+                    </i>
                     ${tweet.deletes}
                 </span>
                 <span class="tweet-detail">
