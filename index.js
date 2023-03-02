@@ -5,6 +5,7 @@ document.addEventListener("click",function(e){// these event listener focuses on
     if (e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
     }
+    
     else if (e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
     }
@@ -31,7 +32,20 @@ function handleLikeClick(tweetId){// aim isto make these function log out the uu
     render()//will help in increment of likes
 }
 
-function
+function handleDeleteClick(tweetId){
+    const targetTweetObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+
+    if(targetTweetObj.isDeleted){
+        targetTweetObj.deletes--
+    }
+    else{
+        targetTweetObj.deletes++
+    }
+    targetTweetObj.isDeleted = ! targetTweetObj.isDeleted
+    render()
+}
 
 function handleRetweetClick(tweetId) {
 
