@@ -40,6 +40,7 @@ export const tweetsData = [// how to transfer the array to index.js
         profilePic: `images/boris.png`,
         likes: 10,
         retweets: 3,
+        deletes: 12,
         tweetText: `Are you a coder if you only know HTML?`,
         replies: [
             {
