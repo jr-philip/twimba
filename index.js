@@ -5,7 +5,9 @@ document.addEventListener("click",function(e){// these event listener focuses on
     if (e.target.dataset.like){
         handleLikeClick(e.target.dataset.like)
     }
-    
+    else if(e.target.dataset.delete){
+        handleDeleteClick(e.target.dataset.delete)
+    }
     else if (e.target.dataset.retweet){
         handleRetweetClick(e.target.dataset.retweet)
     }
@@ -149,7 +151,7 @@ function getFeedHtml(){
                 </span>
                 <span class="tweet-delete">
                     <i class="fa-solid fa-trash ${deleteIconClass}" 
-                    data-retweet="${tweet.uuid}">
+                    data-delete="${tweet.uuid}">
                     </i>
                     ${tweet.deletes}
                 </span>

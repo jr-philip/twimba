@@ -9,6 +9,7 @@ export const tweetsData = [// how to transfer the array to index.js
             Guaranteed return on investment. HMU DMs open!!`,
         replies: [],
         isLiked: false,
+        isDeleted: false,
         isRetweeted: false,
         uuid: '4b161eee-c0f5-4545-9c4b-8562944223ee',
     },
