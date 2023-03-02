@@ -89,6 +89,12 @@ function getFeedHtml(){
             retweetIconClass = "retweeted"
         }
 
+        let deleteIconClass = ""
+
+        if(tweet.isDeleted){
+            deleteIconClass = "deleted"
+        }
+
         let repliesHtml =""
         if(tweet.replies.length){
            tweet.replies.forEach(function(reply){// forEach is a good way to iterate over arrays
@@ -125,12 +131,19 @@ function getFeedHtml(){
                     </i>
                     ${tweet.likes}
                 </span>
+                <span class="tweet-delete">
+                <i class="fa-solid fa-trash ${deleteIconClass}" 
+                data-retweet="${tweet.uuid}">
+                </i>
+                    ${tweet.deletes}
+                </span>
                 <span class="tweet-detail">
                 <i class="fa-solid fa-retweet ${retweetIconClass}" 
                 data-retweet="${tweet.uuid}">
                 </i>
                     ${tweet.retweets}
                 </span>
+                
             </div>   
         </div>            
     </div>

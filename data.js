@@ -4,6 +4,7 @@ export const tweetsData = [// how to transfer the array to index.js
         profilePic: `images/trump.jpg`,
         likes: 27,
         retweets: 10,
+        deletes: 0,
         tweetText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
             Guaranteed return on investment. HMU DMs open!!`,
         replies: [],
@@ -16,6 +17,7 @@ export const tweetsData = [// how to transfer the array to index.js
         profilePic: `images/putin.png`,
         likes: 6500,
         retweets: 234,
+        deletes: 4,
         tweetText: `I need volunteers for a one-way mission to Mars 🪐. No experience necessary🚀`,
         replies: [
             {
