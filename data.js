@@ -5,8 +5,7 @@ export const tweetsData = [// how to transfer the array to index.js
         likes: 27,
         retweets: 10,
         deletes: 0,
-        tweetText: `Buy Bitcoin, ETH Make 💰💰💰 low low prices. 
-            Guaranteed return on investment. HMU DMs open!!`,
+        tweetText: `"To be blunt, people would vote for me. They just would. Why? Maybe because I'm so good looking."`,
         replies: [],
         isLiked: false,
         isDeleted: false,
@@ -56,6 +55,7 @@ export const tweetsData = [// how to transfer the array to index.js
             },
         ],
         isLiked: false,
+        
         isRetweeted: false,
         uuid: '8hy671sff-c0f5-4545-9c4b-1237gyys45',
     },
